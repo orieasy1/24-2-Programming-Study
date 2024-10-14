@@ -60,7 +60,7 @@ domain을 작성하고 돌리는데 SpringBootApplication도 안돌아가고 테
 책에서는 JUnit4를 기준으로 테스트 코드를 작성해놓아서 나는 아래와 같이 Junit5로 테스트 코드를 수정하여 작성하였다.
 
 
-
+```java
 package org.example.spring_study.domain.posts;
 
 import org.junit.jupiter.api.AfterEach;
@@ -106,7 +106,7 @@ public class PostsRepositoryTest {
     }
 
 }
-
+```
 
 
 
@@ -116,6 +116,7 @@ public class PostsRepositoryTest {
 
 PostsApiControllerTest도 다음과 같이 JUnit5를 바탕으로 수정하여 작성하였다.
 
+```java
 package org.example.spring_study.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -187,7 +188,7 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 }
-
+```
 
 update 기능을 살펴보면 데이터 베이스에 쿼리를 날리븐느 부분이 없다. 이것이 가능한 이후는 JPA의 영속성 컨테스트 때문이다.
 
